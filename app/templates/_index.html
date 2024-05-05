@@ -1,0 +1,46 @@
+<!-- App content -->
+{% extends "_base.html" %}
+{% load static %}
+
+<!-- TODO : Stylesheets -->
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/_index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/_navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/_aside.css' %}">
+    <link rel="stylesheet" href="{% static 'css/_footer.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!-- Navbar -->
+    <nav>
+    {% block navbar-content %}
+    {% include "_navbar.html" %}
+    {% endblock %}
+    </nav><div id="nav-shadow"></div>
+
+    <main>
+        <!-- Aside menu -->
+        <aside>
+            {% block aside-content %}
+            {% include "_aside.html" %}
+            {% endblock %}   
+        </aside><div id="aside-shadow"></div>
+
+        <div id="main-content">
+            <!-- Page main content -->
+            {% block main-content %}{% endblock %}
+
+            <!-- Footer -->
+            <footer>
+                {% block footer-content %}
+                {% include "_footer.html" %}
+                {% endblock %}
+            </footer>
+        </div>
+    </main>
+{% endblock %}
+
+<!-- Scripts -->
+{% block scripts %}
+    <script defer src="{% static 'js/index.js' %}"></script>
+{% endblock %}

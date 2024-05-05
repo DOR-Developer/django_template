@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 0;
+    min-width: 0;
+}
+
+/* Add your global variables and colors here */
+:root {
+    --navbar-height: 33px;
+    --aside-width: 200px;
+
+    --primary-color: #273043;
+    --secondary-color: #F02D3A;
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #ffffff;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Lists */
+ul, ol, menu {
+    display: flex;
+}
+ul.vertical, ol.vertical, menu.vertical {
+    flex-direction: column;
+}
+ul.vertical > *, 
+ol.vertical > *, 
+menu.vertical > * {
+    width: 100%;
+}
+li {
+    list-style: none;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}

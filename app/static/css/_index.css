@@ -1,0 +1,88 @@
+/* Navbar */
+nav {
+    display: flex;
+    align-items: center;
+    height: var(--navbar-height);
+}
+nav menu {
+    display: flex;
+    flex-wrap: nowrap;
+}
+nav menu li {
+    display: flex;
+}
+nav menu li a {
+    padding: .5rem;
+}
+#nav-shadow {
+    position: absolute;
+    top: var(--navbar-height);
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(#ddd, rgba(0, 0, 0, 0));
+}
+
+/* Main section */
+main:not(.scroll) {
+    height: calc(100vh - var(--navbar-height));
+}
+main:not(.scroll) aside,
+main:not(.scroll) #main-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+main {
+    display: flex;
+}
+
+/* Side main section */
+aside {
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 0 0 var(--aside-width);
+    height: calc(100vh - var(--navbar-height));
+}
+aside menu {
+    display: flex;
+    flex-direction: column;
+}
+aside menu li {
+    width: 100%;
+    display: flex;
+}
+aside menu li i {
+    flex: 0 0 36px;
+}
+aside menu li a {
+    flex: 1 1 auto;
+    padding: .5rem;
+}
+#aside-shadow {
+    position: absolute;
+    top: var(--navbar-height);
+    left: var(--aside-width);
+    width: 5px;
+    height: calc(100vh - var(--navbar-height));
+    background: linear-gradient(to right, #ddd, rgba(0, 0, 0, 0));
+}
+
+/* Main page content */
+#main-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--navbar-height);
+}
+#main-content > * {
+    width: 100%;
+}
+#main-content section {
+    flex: 0 0 calc(100vh - var(--navbar-height));
+}
+#main-content footer {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
