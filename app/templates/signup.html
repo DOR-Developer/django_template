@@ -10,7 +10,28 @@
 {% endblock %}
 
 {% block content %}
-    
+    <form action="/login" method="POST">
+        {% csrf_token %}
+        <h2>Signup</h2>
+        <label>
+            <span>{{ form.username.label }}</span>
+            {{ form.username }}
+        </label>
+        <label>
+            <span>{{ form.password.label }}</span>
+            {{ form.password }}
+        </label>
+        <label>
+            <span>{{ form.repassword.label }}</span>
+            {{ form.repassword }}
+        </label>
+        <label>
+            {{ form.terms }}
+            <span>I've read and accept the <a href="/about/legal" target="_blank">terms and conditions</a>.</span>
+        </label>
+        <a href="/login">Already have an account? Log in.</a>
+        <button type="submit">Sign up</button>
+    </form>
 {% endblock %}
 
 <!-- Scripts -->

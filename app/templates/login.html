@@ -10,7 +10,20 @@
 {% endblock %}
 
 {% block content %}
-    
+    <form action="/login" method="POST">
+        {% csrf_token %}
+        <h2>Login</h2>
+        <label>
+            <span>{{ form.username.label }}</span>
+            {{ form.username }}
+        </label>
+        <label>
+            <span>{{ form.password.label }}</span>
+            {{ form.password }}
+        </label>
+        <a href="/signup">Don't have an account? Sign up.</a>
+        <button type="submit">Log in</button>
+    </form>
 {% endblock %}
 
 <!-- Scripts -->

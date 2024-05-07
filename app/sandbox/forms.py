@@ -1,15 +1,13 @@
 from django import forms
 
-class LoginForm:
+class LoginForm(forms.Form):
     # TODO : Add form validation and custom fields.
-    username = forms.CharField()
-    password = forms.CharField(widget=forms.PasswordInput())
-    pass
+    username = forms.CharField(label="Username")
+    password = forms.CharField(label="Password", widget=forms.PasswordInput())
 
-class SignupForm:
+class SignupForm(forms.Form):
     # TODO : Add form validation and custom fields.
-    username = forms.CharField()
-    password = forms.CharField(widget=forms.PasswordInput())
-    repassword = forms.CharField(widget=forms.PasswordInput())
-    terms = forms.BooleanField()
-    pass
+    username = forms.CharField(label="Username")
+    password = forms.CharField(label="Password", widget=forms.PasswordInput())
+    repassword = forms.CharField(label="Repeat password", widget=forms.PasswordInput())
+    terms = forms.BooleanField(label="I've read and accept the terms and conditions.")

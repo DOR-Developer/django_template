@@ -12,13 +12,14 @@
     --aside-width: 200px;
 
     --primary-color: #273043;
-    --secondary-color: #F02D3A;
+    --secondary-color: #934aa5;
     --primary-text-color: #ffffff;
     --secondary-text-color: #ffffff;
 }
 
 body {
     min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Lists */
@@ -39,6 +40,19 @@ li {
 
 /* Links */
 a {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: inherit;
+}
+
+/* Inputs */
+input:not([type='radio'], [type='checkbox']), 
+button {
+    padding: .25rem;
+    border: 1px solid #999;
+}
+button {
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+    background-color: transparent;
 }
